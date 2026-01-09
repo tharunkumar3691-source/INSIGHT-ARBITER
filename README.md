@@ -65,3 +65,47 @@ No external APIs, machine learning frameworks, or third-party platforms are requ
 ├── demo/
 │   └── demo_video.mp4
 └── README.md
+
+Text
+SUM([Profit]) - LOOKUP(SUM([Profit]), -1)
+Table Calculation: Compute using Date
+CaluculationMetric
+
+Code:
+
+IF [Revenue Trend] > 0
+AND [Profit Trend] < 0
+THEN "Conflict Detected"
+ELSE "No Conflict"
+END
+
+This detects when revenue is increasing while profit is decreasing.
+6️⃣ Decision Context Parameter
+Parameter Name: Decision Context
+Type: String
+Values:
+Pricing
+Growth
+This allows users to specify the type of business decision.
+7️⃣ Recommendation Logic
+Recommended Metric
+Code:
+
+IF [Decision Context] = "Pricing"
+THEN "✔ Prioritize PROFIT"
+ELSE "✔ Prioritize REVENUE"
+END
+The recommendation updates dynamically based on the selected decision context.
+8️⃣ Explanation Text
+explanation output:
+
+"Revenue is increasing due to higher discounts, while profit is declining because costs are rising."
+
+This provides business-friendly context for the detected conflict.
+9️⃣ Final Insight Arbiter View Includes
+Conflict status
+Decision Context selector
+Recommended Metric
+Short explanation text
+Together, these elements transform conflicting dashboards into clear, actionable guidance.
+Insight Arbiter demonstrates how Tableau can evolve from visualization to decision intelligence.
